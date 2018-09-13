@@ -92,11 +92,12 @@ const trunc = (text, length, ignoreColors=false) => {
   return `${output}{/}`;
 };
 
+// colors based off Google Stackdriver console:
 const levelColors = {
-  debug: s => `{cyan-fg}${s}{/cyan-fg}`,
-  info: s => `{#ffff94-fg}{bold}${s}{/bold}{/#ffff94-fg}`,
-  warn: s => `{#ffa500-fg}${s}{/#ffa500-fg}`,
-  error: s => `{red-fg}${s}{/red-fg}`,
+  debug: s => `{blue-fg}${s}{/blue-fg}`,
+  info: s => `{#7FDBFF-fg}${s}{/#7FDBFF-fg}`, // light blue
+  warn: s => `{#DA7732-fg}${s}{/#DA7732-fg}`, // orange
+  error: s => `{#C2513F-fg}${s}{/#C2513F-fg}`, // red
 };
 
 module.exports = { formatRows, maxLengths, hasColors, stripColors, spaces, padEnd, len, trunc, levelColors };
